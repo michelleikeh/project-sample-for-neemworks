@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Michelle Onyinye blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width-device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="w3school.css">
+  <style>
+  ul#addingcomment li {
+  	border-bottom: 1px solid #a9a9a9;
+  	padding: 10px;
+  	background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#e3e3e3));
+      background-image: -moz-linear-gradient(#f9f9f9, #e3e3e3);
+      background-image: -ms-linear-gradient(#f9f9f9, #e3e3e3);
+      background-image: -o-linear-gradient(#f9f9f9, #e3e3e3);
+      background-image: -webkit-linear-gradient(#f9f9f9, #e3e3e3);
+      background-image: linear-gradient(#f9f9f9, #e3e3e3);
+  }
+
+  ul#addingcomment li:last-child {
+  	-webkit-border-bottom-right-radius: 5px;
+  	-webkit-border-bottom-left-radius: 5px;
+  	-moz-border-radius-bottomright: 5px;
+  	-moz-border-radius-bottomleft: 5px;
+  	border-bottom: none;
+  	border-bottom-right-radius: 5px;
+  	border-bottom-left-radius: 5px;
+  }
+  ul#addingcomment li:first-child {
+  	-webkit-border-top-right-radius: 5px;
+  	-webkit-border-top-left-radius: 5px;
+  	-moz-border-radius-topright: 5px;
+  	-moz-border-radius-topleft: 5px;
+  	border-top-right-radius: 5px;
+  	border-top-left-radius: 5px;
+  }
+
+  </style>
+</head>
+<body class="w3-green" style="font-family:arial, sans-serif">
+  <div class="w3-content"  style="max-width:1400px">
+    <header class="w3-container w3-center w3-padding-32">
+      <h1><b>MY BLOG</b></h1>
+      <p>Welcome to this page</p>
+    </header>
+    <div class="w3-row">
+      <div class="w3-col l8 s12">
+        <div class="w3-card-4 w3-margin w3-light-green">
+          <img src=images/CoconutOil.jpg alt="seed" style="width:100%">
+          <div class="w3-container w3-padding-8">
+            <h3><b>COCONUTS</b></h3>
+            <h4> Health Benefits of Coconuts</h4>
+          </div>
+          <div class="w3-container">
+            <p>
+              To date, there are over 1,500 studies proving coconut oil to be
+              one of the healthiest foods on the planet. Coconut oil benefits
+              and uses go beyond what most people realize.Research has finally
+              uncovered the secrets to this amazing fruit; namely healthy fats
+              called medium-chain fatty acids (MCFAs), these unique fats
+              include:</p>
+              <ul>
+                <li><b> Caprylic acid</b></li>
+                <li><b>Lauric acid</b></li>
+                <li><b>Capric acid</b><li>
+                </ul>
+              <p>  And around 62% of the oils in coconut are made up of these
+                3 healthy fatty acids and 91% of the fat in coconut oil is
+                 healthy saturated fat.Most of the fats that we consume take
+                 longer to digest, but MCFAs found in coconut oil provide the
+                  perfect source of energy because they only have to go through
+                   a 3 step process to be turned into fuel vs. other fats go
+                   through a 26 step process!Unlike long-chain fatty acids
+                   (LCFAs) found in plant based oils, MCFAs are:</p>
+                   <ul>
+                     <li><b>Easier to digest</b></li>
+                       <li><b>Not readily stored as fat</b></li>
+                       <li><b>Are anti-microbial and anti-fungal</b></li>
+                       <li><b>Smaller in size,allowing easier cell permeability</b></li>
+                       <li><b>Proceed by the liver, which means that they are immediately
+                         converted to energy instead of being stored as fat</b></li>
+                       </ul>
+
+                <div class="w3-col m8 s12">
+                <p><a href="https://draxe.com/coconut-oil-benefits/" target="_blank">Read more</a></p>
+
+              </div>
+
+              <div class="w3-container w3-col">
+                <form>
+                  <input type="text" id="comments" placeholder="comments">
+                  <input type="button" id="addcomment" value="addcomment">
+                </form>
+                <ul id="addingcomment">
+
+                </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <div class="w3-col l4">
+          <div class="w3-card-2 w3-margin w3-margin-top">
+          <img src=images/mario.png style="width:100%">
+            <div class="w3-container w3-white">
+              <h4><b>Michelle Ikeh</b></h4>
+              <p>Just me, reading something nice nd feeling like its
+              worth sharing.</p>
+            </div>
+          </div><hr>
+        </div>
+      </div>
+    </div>
+
+
+      <script>
+            var button = document.getElementById("addcomment");
+            button.onclick=handleButtonClick;
+          function handleButtonClick(){
+            var comments = document.getElementById("comments");
+            var addcomment=comments.value;
+            var li=document.createElement("li");
+            li.innerHTML=addcomment;
+            var ul = document.getElementById("addingcomment");
+            ul.appendChild(li);
+          }
+        </script>
+</body>
+</html>
